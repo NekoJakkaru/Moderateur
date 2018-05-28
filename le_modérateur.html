@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Modo</title>
+    </head>
+    <style>
+        #resultat {
+            background-color: grey;
+            width : 500px;
+            min-height : 10px;
+        }
+        textarea {
+            min-width: 500px;
+        }
+    </style>
+    <body>
+        <form>
+            <textarea id="message">:') J'adore les :) c'est trop :D !</textarea>
+            <input type="button" id="moderer" value="Modérer"/>
+        </form>
+        <h2>Résultat</h2>
+        <div id="resultat">
+        </div>
+    </body>
+    <script>
+        var btnModerer = document.getElementById('moderer');
+        var resultat = document.getElementById('resultat');
+        btnModerer.addEventListener("click", function(){
+            var message = document.getElementById('message');
+
+            resultat.innerHTML = message.value;
+        });
+    </script>
+</html>
