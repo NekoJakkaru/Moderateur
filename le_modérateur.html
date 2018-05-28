@@ -28,8 +28,12 @@
         var resultat = document.getElementById('resultat');
         btnModerer.addEventListener("click", function(){
             var message = document.getElementById('message');
-
-            resultat.innerHTML = message.value;
+            var smailey = [":')",":)" ];
+            var modererMessage = message.value;
+            for (var i = 0, i < smailey.length , i+=1) {
+                modererMessage = modererMessage.replace(smailey[i], '--');
+            }
+            resultat.innerHTML = modererMessage;
         });
     </script>
 </html>
